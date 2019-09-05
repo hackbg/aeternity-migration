@@ -1,0 +1,21 @@
+contract AeternityMigration =
+  record state = { migrated: map(address, bool) }
+  
+  entrypoint init() = { migrated = { } }
+
+  entrypoint get_state() : state = state
+  
+  stateful entrypoint migrate(amount: int, beneficiary: address) : bool =
+    require(state.migrated[beneficiary] == false, "Already migrated")
+    
+    // Query the oracle to check for the presence
+    // of emited event with the beneficiary address, amount migrated
+    // and ethereum address
+    
+    // Oracle.query()
+    // Oracle.get_answer()
+
+    // eventually
+    put(state{ migrated[beneficiary] = true })
+    Chain.spend(beneficiary, amount)
+    true

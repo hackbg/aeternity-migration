@@ -16,9 +16,9 @@
  */
 
 const Deployer = require('aeproject-lib').Deployer;
-const EXAMPLE_CONTRACT_PATH = "./contracts/ExampleContract.aes";
+const CONTRACT_PATH = "./contracts/AeternityMigration.aes";
 
-describe('Example Contract', () => {
+describe('AeternityMigration Contract', () => {
 
     let deployer;
     let ownerKeyPair = wallets[0];
@@ -27,9 +27,9 @@ describe('Example Contract', () => {
         deployer = new Deployer('local', ownerKeyPair.secretKey)
     })
 
-    it('Deploying Example Contract', async () => {
-        const deployPromise = deployer.deploy(EXAMPLE_CONTRACT_PATH) // Deploy it
+    it('Deploying AeternityMigration Contract', async () => {
+        const deployPromise = deployer.deploy(CONTRACT_PATH) // Deploy it
 
-        await assert.isFulfilled(deployPromise, 'Could not deploy the ExampleContract Smart Contract'); // Check whether it's deployed
+        await assert.isFulfilled(deployPromise, 'Could not deploy the AeternityMigration Smart Contract'); // Check whether it's deployed
     })
 })
