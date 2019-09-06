@@ -144,5 +144,6 @@ Deploy contract initialy and keep it locked with until the HF when the whole amo
 #### 4. Oracle
 
 The oracle backend service is listening for emitted events in the ethereum smart contract, and is persisting the balance in:
-    - a) on-chain smart contract [if the oracle is smart-contract based]
-    - b) database [if the oracle is NOT smart-contract based]
+    
+- a) on-chain smart contract [if the oracle is smart-contract based]
+- b) database [if the oracle is NOT smart-contract based]
