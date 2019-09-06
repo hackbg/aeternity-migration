@@ -1,4 +1,4 @@
-# Aeternity migration scheme [proposal]
+# [Proposal] Aeternity ERC20 token migration scheme
 
 ## Intro
 This proposal aims to describe a possible aeternity erc20 token migration implementation for Lima HF.
